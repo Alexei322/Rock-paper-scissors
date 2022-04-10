@@ -24,6 +24,17 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerLowerCase === "paper" && computerSelection === "Rock") {
         return "You Win! Paper beats Rock!";
     }
+}
 
-    
+function game() {
+    let playerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        userInput = window.prompt("Enter your choice!");
+        gameOutput = playRound(userInput, computerPlay());
+        console.log(gameOutput);
+        if(gameOutput.includes("You Win!")) {
+            playerScore += 1;
+        }
+    }
+    return playerScore;
 }
