@@ -115,4 +115,3 @@ rockSelect.addEventListener('click', rock => gameCall("Rock"));
 paperSelect.addEventListener('click', paper => gameCall("Paper"));
 scissorSelect.addEventListener('click', scissors => gameCall("Scissors"));
 
-console.log("test");
