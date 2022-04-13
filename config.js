@@ -49,7 +49,6 @@ function addScore(elementOne, elementTwo) {
         let intEle4 = compSelect.textContent;
         intEle3 = parseInt(intEle3);
         intEle4 = parseInt(intEle4);
-        console.log("User score:", intEle3, "Comp score:", intEle4);
         return gameOver(intEle3, intEle4);
     } else {
         elementOne.textContent = intEle1 + 1;
@@ -115,3 +114,5 @@ function gameCall(input) {
 rockSelect.addEventListener('click', rock => gameCall("Rock"));
 paperSelect.addEventListener('click', paper => gameCall("Paper"));
 scissorSelect.addEventListener('click', scissors => gameCall("Scissors"));
+
+console.log("test");
