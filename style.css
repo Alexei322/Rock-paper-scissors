@@ -43,7 +43,7 @@ body {
 
 .highlight {
     background-color: aqua;
-    font-size: 24px;
+    font-size: 14px;
     height: 80px;
     width: 100px;
 }
@@ -65,7 +65,7 @@ button {
 }
 
 .newGameText {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
 }
