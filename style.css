@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.resultsText {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+}
+
+.results {
+    height: 5vw;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.finalMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 146px;
+    font-size: 36px;
+    color: white;
+}
+
+.heading {
+    display: flex;
+    height: 10vh;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.highlight {
+    background-color: aqua;
+    font-size: 24px;
+    height: 80px;
+    width: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: top;
+    margin-top: 15vw;
+    
+}
+
+button {
+    background-color: aqua;
+    font-size: 18px;
+    height: 80px;
+    width: 100px;
+}
+
+.newGameText {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
