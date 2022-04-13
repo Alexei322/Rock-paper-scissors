@@ -7,14 +7,14 @@ function playRound(playerSelection, computerSelection) {
     playerLowerCase = playerSelection.toLowerCase();
     if ((playerLowerCase === "rock" && computerSelection === "Scissors") || (playerLowerCase === "scissors" && computerSelection === "Paper") 
     || (playerLowerCase === "paper" && computerSelection === "Rock")) {
-        console.log("You Win!");
+        console.log("You Win!", playerSelection, "beats", computerSelection);
         return 1;
     } else if ((playerLowerCase === "rock" && computerSelection === "Paper") || (playerLowerCase === "scissors" && computerSelection === "Rock")
      || (playerLowerCase === "paper" && computerSelection === "Scissors")){
-         console.log("You Lose!");
-         return -1;
+        console.log("You Lose!", playerSelection, "loses to", computerSelection);
+        return -1;
     } else {
-        console.log("Draw!");
+        console.log("Draw!", playerSelection, "loses to", computerSelection);
         return 0;
     }
 }
@@ -107,7 +107,11 @@ function resetGame() {
     finMessageButton.parentNode.removeChild(finMessageButton);
 }
 
+function gameCall(input) {
+    let gameScore = game(input);
+    (gameScore> 0) ? addScore(winSelect, totalSelect) : (gameScore < 0) ? addScore(loseSelect, compSelect): drawRound(drawSelect);
+}
 
-rockSelect.addEventListener('click', rock => game("Rock") > 0 ? addScore(winSelect, totalSelect) : game("Rock") < 0 ? addScore(loseSelect, compSelect): drawRound(drawSelect));
-paperSelect.addEventListener('click', paper => game("Paper") > 0 ? addScore(winSelect, totalSelect) : game("Paper") < 0 ? addScore(loseSelect, compSelect): drawRound(drawSelect));
-scissorSelect.addEventListener('click', scissors => game("Scissors") > 0 ? addScore(winSelect, totalSelect) : game("Scissors") < 0 ? addScore(loseSelect, compSelect): drawRound(drawSelect));
+rockSelect.addEventListener('click', rock => gameCall("Rock"));
+paperSelect.addEventListener('click', paper => gameCall("Paper"));
+scissorSelect.addEventListener('click', scissors => gameCall("Scissors"));
